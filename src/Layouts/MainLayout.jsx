@@ -25,7 +25,7 @@ const MainLayout = () => {
                 <aside className='col-span-3'>
                     <LeftAside></LeftAside>
                 </aside>
-                <section className='main col-span-6'>
+                <section className='main col-span-6 p-4 '>
                     <Outlet></Outlet>
                 </section>
                 <aside className='col-span-3'>
