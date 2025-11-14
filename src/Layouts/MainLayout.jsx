@@ -4,6 +4,7 @@ import Header from '../Components/Header';
 import Latest from '../Components/Latest';
 import Navbar from '../Components/Navbar';
 import LeftAside from '../Components/homelayout/LeftAside';
+import RightAside from '../Components/homelayout/RightAside';
 
 const MainLayout = () => {
     return (
@@ -19,15 +20,17 @@ const MainLayout = () => {
                 <Navbar></Navbar>
             </nav>
             
-            <main>
+            <main className='w-11/12 mx-auto my-3 grid grid-cols-12'>
                 
-                <aside>
+                <aside className='col-span-3'>
                     <LeftAside></LeftAside>
                 </aside>
-                <section className='main'>
+                <section className='main col-span-6'>
                     <Outlet></Outlet>
                 </section>
-                <section className='right_nav'></section>
+                <aside className='col-span-3'>
+                    <RightAside></RightAside>
+                </aside>
             </main>
            
 
