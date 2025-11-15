@@ -21,7 +21,7 @@ const Navbar = () => {
 
       <div className="flex gap-5">
         <img src="/src/assets/user.png" alt="" />
-        <Link className="btn btn-primary px-10">Login</Link>
+        <Link to='/auth/login' className="btn btn-primary px-10">Login</Link>
       </div>
     </div>
   );
