@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router';
     const categoryPromise = fetch("/public/categories.json").then((res) => res.json())
 
 const Categories = () => {
-    console.log(categoryPromise);
+    // console.log(categoryPromise);
     const categories = use(categoryPromise);
     const {id} = useParams();
     return (

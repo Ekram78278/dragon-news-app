@@ -1,12 +1,13 @@
 import { use } from "react";
 import { Link } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
+import userPlaceholder from "../assets/user.png";
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
 
   const handleLogout = () => {
-    console.log("user trying to logout");
+    // console.log("user trying to logout");
     logOut().then(() => {
       alert("you logged out successfully").error((error) => {
         console.log(error);
@@ -42,7 +43,7 @@ const Navbar = () => {
             Login
           </Link>
         )}
-        <img src="/src/assets/user.png" alt="" />
+        <img className="W-12 rounded-full" src={user?.photoURL || userPlaceholder} alt="" />
       </div>
     </div>
   );

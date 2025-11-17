@@ -5,7 +5,7 @@ import NewsCard from "../Components/NewsCard";
 const Category = () => {
   const { id } = useParams();
   const data = useLoaderData();
-  console.log(data);
+  // console.log(data);
 
   const [category, setCategory] = useState([]);
 
@@ -20,7 +20,7 @@ const Category = () => {
       setCategory(filteredNews);
     } else {
       const filteredNews = data.filter((news) => news.category_id == id);
-      console.log(filteredNews);
+      // console.log(filteredNews);
       setCategory(filteredNews);
     }
   }, [data, id]);
